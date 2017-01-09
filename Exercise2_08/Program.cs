@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace week2_exercises
+namespace Exercise2_08
 {
     class Program
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Chapter 2, problem 8");
         }
     }
 }
