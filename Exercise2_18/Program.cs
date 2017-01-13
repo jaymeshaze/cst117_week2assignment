@@ -22,11 +22,14 @@ namespace Exercise2_18
             }
 
         }
+
         static int findPolynomial(int y)
         {
+            //solve the first calculation to store in a temp variable, in order to use Math.Pow
            double x = Convert.ToDouble(y);
            double tempX = 4 * x;
            double a = Math.Pow(tempX, 2);
+            //calculate the rest of the equation and return answer
            double b = 3 * x;
            return Convert.ToInt16((a + b) - 5);
         }

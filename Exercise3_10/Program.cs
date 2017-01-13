@@ -14,6 +14,25 @@ namespace Exercise3_10
     {
         static void Main(string[] args)
         {
+            double gpa;
+            Console.WriteLine("Enter your GPA: ");
+            double userGpa = double.Parse(Console.ReadLine());
+            Console.WriteLine(checkGPA(userGpa));
+        }
+        static string checkGPA(double x)
+        {
+            if(x >= 3.5)
+            {
+                return "Congratulations, You made honor roll";
+            }
+            else if(x < 3.5 && x >= 2)
+            {
+                return ("Your GPA is " + x);
+            }
+            else
+            {
+                return "Sorry, You are on probation";
+            }
         }
     }
 }

@@ -45,6 +45,33 @@ namespace Exercise3_08
     {
         static void Main(string[] args)
         {
+            double taxa = .05;
+            double taxb = .04;
+
+            Console.Write("enter a purchase price in county a, -1 to quit");
+            double pricea = double.Parse(Console.ReadLine());
+            double totala = 0.0;
+
+            while (pricea >= 0)
+            {
+                totala += pricea;
+                Console.Write("enter a purchase price in county a, -1 to quit");
+                pricea = double.Parse(Console.ReadLine());
+            }
+
+            Console.Write("enter a purchase price in county b, -1 to quit");
+            double priceb = double.Parse(Console.ReadLine());
+            double totalb = 0.0;
+
+            while (priceb >= 0)
+            {
+                totalb += priceb;
+                Console.Write("enter a purchase price in county b, -1 to quit");
+                priceb = double.Parse(Console.ReadLine());
+            }
+
+            double tax = (totala * taxa) + (totalb * taxb);
+            Console.WriteLine("the total sales tax is {0:c}", tax);
         }
     }
 }

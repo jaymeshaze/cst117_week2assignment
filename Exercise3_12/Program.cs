@@ -15,6 +15,39 @@ namespace Exercise3_12
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Enter cost of the item (less than 1 dollar): ");
+            int cost = int.Parse(Console.ReadLine());
+            int change = 100 - cost;
+            Console.WriteLine(processChange(change));
+        }
+        static string processChange(int x)
+        {
+            int total = x;
+            int quarter = 0;
+            int dime = 0;
+            int nickel = 0;
+            int penny = 0;
+
+            while(total > 0){
+                if(total >= 25)
+                {
+                    quarter++;
+                    total = total - 25;
+                }else if(total >= 10)
+                {
+                    dime++;
+                    total = total - 10;
+                }else if(total >= 5)
+                {
+                    nickel++;
+                    total = total - 5;
+                }else if(total >= 1)
+                {
+                    penny++;
+                    total--;
+                }
+            }
+            return ("The change is " + quarter + " quarters, " + dime + " dimes, " + nickel + " nickels and " + penny + " pennies.");
         }
     }
 }

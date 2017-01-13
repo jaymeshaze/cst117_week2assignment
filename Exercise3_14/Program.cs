@@ -15,6 +15,36 @@ namespace Exercise3_14
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Enter length in meters: ");
+            double length = double.Parse(Console.ReadLine());
+            Console.WriteLine(convertLength(length));
+        }
+        static string convertLength(double x)
+        {
+            double meters = x;
+            double inches = calcInches(meters);
+            double feet = calcFeet(inches);
+
+            if(inches > 12)
+            {
+                return String.Format("{0} meters converts to {1:0.00} feet.", x, feet);
+            }
+            else
+            {
+                return String.Format("{0} meters converts to {1:0.00} inches.", x, inches);
+            }
+        }
+        static double calcInches(double x)
+        {
+            double meters = x;
+            double inches = x * 39.37;
+            return inches;
+        }
+        static double calcFeet(double x)
+        {
+            double inches = x;
+            double feet = inches / 12;
+            return feet;
         }
     }
 }
