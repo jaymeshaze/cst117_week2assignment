@@ -13,6 +13,29 @@ namespace Exercise6_12
     {
         static void Main(string[] args)
         {
+            String x = "y";
+
+            Console.WriteLine("Enter a word: ");
+            String firstWord = Console.ReadLine();
+
+            Console.WriteLine("Enter another word? 'y' or 'n'");
+            x = Console.ReadLine();
+
+            while (x == "y")
+            {
+                Console.WriteLine("Enter a word: ");
+                String nextWord = Console.ReadLine();
+
+                if (nextWord.CompareTo(firstWord) < 0)
+                {
+                    firstWord = nextWord;
+                }
+
+                Console.WriteLine("Enter another word? 'y' or 'n'");
+                x = Console.ReadLine();
+            }
+            Console.WriteLine("The first word, in alphabetical order, is {0}.", firstWord);
         }
     }
+
 }
